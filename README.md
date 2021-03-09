@@ -18,4 +18,4 @@ This weather application allows a user to search for weather worldwide. By typin
 
 ## Preview
 
-![GIF](
+![GIF]()

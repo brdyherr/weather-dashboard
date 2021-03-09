@@ -10,20 +10,18 @@
 // WHEN I click on a city in the search history
 // THEN I am again presented with current and future conditions for that city
 
+
+// DOM SELECTORS
+const searchBtn = document.querySelector("#seachBtn")
+
+
 // Application Variables
 var apiKey = "2774fecb2ab2cf87eadd45accf53f81e";
 
 // Done on Page Load: pull buttons from local storage, add event listener to the search button
-document.querySelector("nav > button").addEventListener("click", searchClick);
+
 
 // Event handlers: event handler for search button, collective event handler for search list history
-function searchClick() {
-  var input = document.querySelector("nav input");
-  var city = input.value.trim();
-  if (city) {
-    getCurrentWeather(city);
-  }
-}
 
 // API Calls: Search for current weather by city name; search for forecast by Lat & Lon
 function getCurrentWeather(city) {
@@ -37,3 +35,12 @@ function getCurrentWeather(city) {
 // Update View: Generates HTML that populates page, Function for history, function for current weather section, function for 5-day forecast
 
 //  Data management: function that puts data into local storage, second function that reads data from local storage
+
+// EVENT LISTENERS
+function searchClick() {
+  var input = document.querySelector("nav input");
+  var city = input.value.trim();
+  if (city) {
+    getCurrentWeather(city);
+  }
+}
