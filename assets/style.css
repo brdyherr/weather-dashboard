@@ -21,5 +21,51 @@ body {
 /* MAIN CONTENT */
 .container {
   display: flex;
+}
+
+/* sidebar */
+.sidebar {
   padding: 2rem;
+  width: 40%;
+  background-color: #f4f4f4;
+  min-height: 100vh;
+}
+
+#search {
+  padding: 0.65rem;
+  outline: none;
+  font-size: 1.3rem;
+}
+
+#searchBtn {
+  padding: 0.7rem;
+  margin-left: -10px;
+  font-size: 1.3rem;
+  background-color: rgb(52, 82, 138);
+  color: white;
+}
+
+/* MAIN APPLICATION */
+.main {
+  width: 60%;
+  padding: 2rem;
+  min-height: 100vh;
+}
+/* MEDIA QUERIES */
+@media (max-width: 850px) {
+  /* MAIN CONTENT */
+  .container {
+    flex-direction: column;
+  }
+  /* sidebar */
+  .sidebar {
+    text-align: center;
+    width: 100%;
+    min-height: 0;
+  }
+  .main {
+    width: 100%;
+    min-height: 0;
+    text-align: center;
+  }
 }

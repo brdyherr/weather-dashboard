@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/75bc144dac.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <h1>Weather Dashboard</h1>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <!-- sidebar -->
+      <div class="sidebar">
+        <!-- search -->
+        <nav class="search">
+          <div class="input-group">
+            <label for="search">Search for a City:</label>
+            <div class="group">
+              <input type="text" name="search" id="search" />
+              <button id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+          </div>
+        </nav>
+
+        <!-- search history -->
+        <div class="search-history">
+          <div class="history-card">
+            <p class="history-name">Chicago</p>
+          </div>
+          <div class="history-card">
+            <p class="history-name">New York</p>
+          </div>
+          <div class="history-card">
+            <p class="history-name">Chicago</p>
+          </div>
+          <div class="history-card">
+            <p class="history-name">New York</p>
+          </div>
+          <div class="history-card">
+            <p class="history-name">Chicago</p>
+          </div>
+          <div class="history-card">
+            <p class="history-name">New York</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- MAIN APPLICATION -->
+      <main class="main">
+        <!-- current city card -->
+        <div class="current-city">
+          <h2 class="current-city-title">
+            Atlanta <span class="current-city-date">(8/15/2019)</span>
+          </h2>
+          <p class="current-city-temperature">90deg</p>
+          <p class="current-city-humidity">41%</p>
+          <p class="current-city-wind-speed">47 MPH</p>
+          <p class="current-city-uv-index">9.4%</p>
+        </div>
+
+        <!-- forecast -->
+        <div class="forecast">
+          <h2 class="forecast-title">5-Day Forecast:</h2>
+          <div class="forecast-container">
+            <!-- forecast card -->
+            <div class="forecast-card">
+              <h4 class="forecast-card-date">8/16/2019</h4>
+              <i class="fas fa-sun"></i>
+              <p class="forecast-card-temp">Temp: 300deg</p>
+              <p class="forecast-card-humidity">Humidity: 43%</p>
+            </div>
+            <!-- forecast card -->
+            <div class="forecast-card">
+              <h4 class="forecast-card-date">8/16/2019</h4>
+              <i class="fas fa-sun"></i>
+              <p class="forecast-card-temp">Temp: 300deg</p>
+              <p class="forecast-card-humidity">Humidity: 43%</p>
+            </div>
+            <!-- forecast card -->
+            <div class="forecast-card">
+              <h4 class="forecast-card-date">8/16/2019</h4>
+              <i class="fas fa-sun"></i>
+              <p class="forecast-card-temp">Temp: 300deg</p>
+              <p class="forecast-card-humidity">Humidity: 43%</p>
+            </div>
+            <!-- forecast card -->
+            <div class="forecast-card">
+              <h4 class="forecast-card-date">8/16/2019</h4>
+              <i class="fas fa-sun"></i>
+              <p class="forecast-card-temp">Temp: 300deg</p>
+              <p class="forecast-card-humidity">Humidity: 43%</p>
+            </div>
+            <!-- forecast card -->
+            <div class="forecast-card">
+              <h4 class="forecast-card-date">8/16/2019</h4>
+              <i class="fas fa-sun"></i>
+              <p class="forecast-card-temp">Temp: 300deg</p>
+              <p class="forecast-card-humidity">Humidity: 43%</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
