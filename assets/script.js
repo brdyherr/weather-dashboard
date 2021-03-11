@@ -16,10 +16,10 @@ const searchBtn = document.querySelector("#seachBtn")
 
 
 // Application Variables
-var apiKey = "2774fecb2ab2cf87eadd45accf53f81e";
-var currentDay;
-var fiveDay;
-var history = ['Philadelphia', 'New York', "Austin"];
+const apiKey = "2774fecb2ab2cf87eadd45accf53f81e";
+const currentDay = '';
+const fiveDay = '';
+const history = ['Philadelphia', 'New York', "Austin"];
 
 // Done on Page Load: pull buttons from local storage, add event listener to the search button
 
@@ -48,27 +48,37 @@ function getFiveDayWeather(city) {
 // Update View: Generates HTML that populates page, Function for history, function for current weather section, function for 5-day forecast
 function searchHistory () {
   if (history){
-    let historyCard = document.getElementById('history-card');
+    const historyCard = document.getElementById('history-card');
     for (let i = 0; i < history.length; i++) {
-      let childElement = document.createElement('div');
-      let appendChildElement = historyCard.appendChild(childElement)
+      const childElement = document.createElement('div');
+      const appendChildElement = historyCard.appendChild(childElement)
       appendChildElement.innerHTML = history[i];
       console.log(history[i])
     }
-
   }
 }
+
+localStorage.setItem("items",JSON.stringify([...history]));
+
 
 //  Data management: function that puts data into local storage, second function that reads data from local storage
 
 // EVENT LISTENERS
 function searchClick() {
   console.log('reach search click');
-  var input = document.querySelector("nav input");
-  var city = input.value.trim();
+  const input = document.querySelector("nav input");
+  const city = input.value.trim();
   if (city) {
     getCurrentWeather(city);
     getFiveDayWeather(city);
     searchHistory();
   }
 }
+
+document.addEventListener("DOMContentLoaded", function(event) { 
+  for (let i = 0; i < localStorage.items.length; i++) {
+    const cityList = document.getElementById('history-card');
+    document.getElementById("search" + i).innerHTML = localStorage.items[i];
+    console.log(localStorage.items[0]); 
+  }
+}) 
