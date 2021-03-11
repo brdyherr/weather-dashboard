@@ -17,6 +17,9 @@ const searchBtn = document.querySelector("#seachBtn")
 
 // Application Variables
 var apiKey = "2774fecb2ab2cf87eadd45accf53f81e";
+var currentDay;
+var fiveDay;
+var history = ['Philadelphia', 'New York', "Austin"];
 
 // Done on Page Load: pull buttons from local storage, add event listener to the search button
 
@@ -29,18 +32,43 @@ function getCurrentWeather(city) {
     `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
   )
     .then((res) => res.json())
-    .then(console.log);
+    .then(console.log)
+    .then(success => currentDay = success);
+}
+
+function getFiveDayWeather(city) {
+  fetch(
+    `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}`
+  )
+    .then((res) => res.json())
+    .then(console.log)
+    .then(success => fiveDay = success);
 }
 
 // Update View: Generates HTML that populates page, Function for history, function for current weather section, function for 5-day forecast
+function searchHistory () {
+  if (history){
+    let historyCard = document.getElementById('history-card');
+    for (let i = 0; i < history.length; i++) {
+      let childElement = document.createElement('div');
+      let appendChildElement = historyCard.appendChild(childElement)
+      appendChildElement.innerHTML = history[i];
+      console.log(history[i])
+    }
+
+  }
+}
 
 //  Data management: function that puts data into local storage, second function that reads data from local storage
 
 // EVENT LISTENERS
 function searchClick() {
+  console.log('reach search click');
   var input = document.querySelector("nav input");
   var city = input.value.trim();
   if (city) {
     getCurrentWeather(city);
+    getFiveDayWeather(city);
+    searchHistory();
   }
 }
