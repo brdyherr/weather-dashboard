@@ -36,6 +36,14 @@ body {
   outline: none;
   font-size: 1.3rem;
 }
+.search-label {
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.group {
+  margin-bottom: 2rem;
+}
 
 #searchBtn {
   padding: 0.7rem;
@@ -45,18 +53,34 @@ body {
   color: white;
 }
 
-/* MAIN APPLICATION */
+/* search history */
+.history-card {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* MAIN APPLICATION*/
 .main {
   width: 60%;
   padding: 2rem;
   min-height: 100vh;
 }
+
+.current-city {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 850px) {
   /* MAIN CONTENT */
   .container {
     flex-direction: column;
   }
+
   /* sidebar */
   .sidebar {
     text-align: center;
