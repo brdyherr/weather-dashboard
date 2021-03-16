@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/style.css" />
     <script src="https://kit.fontawesome.com/75bc144dac.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script defer src="assets/script.js"></script>
     <title>Weather Dashboard</title>
   </head>
@@ -29,20 +31,18 @@
 
             <!-- search history -->
             <div class="search-history" id="history-card">
-                <div id="search0"></div>
-                <div id="search1"></div>
-                <div id="search2"></div>
             </div>
         </div>
 
         <!-- MAIN APPLICATION -->
         <main class="main">
             <div class="current-city">
-                <h2 class="current-city-title">Phila <span class="current-city-date">2/2/22</span><span class="current-city-icon" ><i class="fas fa-cloud"></i></span></h2>
-                <p class="current-city-temp">90d</p>
-                <p class="current-city-humidiy">41%</p>
-                <p class="current-city-wind-speed">47 MPH</p>
-                <p class="current-city-uv-index">9.4</p>
+                <p id="currentDay" class="lead"></p>
+                <h2 id="current-city-title"><span class="current-city-date"></span><span class="current-city-icon" ><i class="fas fa-cloud"></i></span></h2>
+                <p id="current-city-temp" class="current-city-temp"></p>
+                <p class="current-city-humidity" id="current-city-humidity"></p>
+                <p class="current-city-wind-speed" id="current-city-wind-speed"></p>
+                <p class="current-city-uv-index" id="current-city-uv-index"></p>
             </div>
             <!-- forecast -->
             <div class="forecast">
@@ -52,12 +52,13 @@
                     <div class="forecast-card">
                         <h4 class="forecast-card-date">1/1/21</h4>
                         <i class="fas fa-sun"></i>
-                        <p class="forecast-card-temp">Temp: 300deg</p>
-                        <p class="forecast-card-humidity">37%</p>
+                        <p class="forecast-card-temp">Temp:</p>
+                        <p class="forecast-card-humidity"></p>
                     </div>
                 </div>
             </div>
         </main>
     </div>
+
   </body>
 </html>

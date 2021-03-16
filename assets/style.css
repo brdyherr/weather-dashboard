@@ -93,3 +93,13 @@ body {
     text-align: center;
   }
 }
+
+.forecast-card {
+  display: inline-flex;
+  max-width: 400px;
+  margin: auto;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid blue;
+  background-color: rgb(252, 252, 247);
+}
