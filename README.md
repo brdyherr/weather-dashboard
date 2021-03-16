@@ -13,9 +13,9 @@ This weather application allows a user to search for weather worldwide. By typin
 
 ## Links
 
-- [Live application URL] ()
+- [Live application URL] (https://brdyherr.github.io/weather-dashboard/)
 - [Github Repo] (https://github.com/brdyherr/weather-dashboard)
 
 ## Preview
 
-![GIF]()
+![image](./weather-snip.JPG)
